@@ -13,9 +13,7 @@
                         </div>
                         <p class="text-divider">Ingresa tus datos</p>
                         <div class="content">
-
-
-
+                            
                             <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="material-icons">fingerprint</i>
