@@ -17,3 +17,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/admin/products','ProductController@index'); //List products
+Route::get('/admin/products/create','ProductController@create'); //crear products (ver formulario)
+Route::post('/admin/products','ProductController@store'); //crear products (registrar)
+
+
+
+
