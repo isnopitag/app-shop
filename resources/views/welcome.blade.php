@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'Python Team Shop')
 @section('body-class','landing-page')
 @section('content')
 <div class="wrapper">
@@ -6,11 +7,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="title">Write the best title for your page.</h1>
-                    <h4>Every landing page needs a small description after the big bold title, that's why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
+                    <h1 class="title">Bienvenidos a Python Team Shop.</h1>
+                    <h4>Se hacen pedidos con base en productos comprados con Bins del Chino.</h4>
                     <br />
                     <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
-                        <i class="fa fa-play"></i> Watch video
+                        <i class="fa fa-play"></i> Puchale pal Rick Rolleo
                     </a>
                 </div>
             </div>
@@ -21,8 +22,8 @@
             <div class="section text-center section-landing">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="title">Let's talk product</h2>
-                        <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+                        <h2 class="title">Python Team Shop?</h2>
+                        <h5 class="description">Python Team shop es un nuevo concepto de tienda en linea, basados en las compras que hace el chinook con bins nosotros las revendemos para obtener una ganancia y gastarlo en Carta Blancas, Capitan Morgan, Chimuelitos y de vez en cuatro veinte posiblidades más</h5>
                     </div>
                 </div>
                 <div class="features">
@@ -32,8 +33,8 @@
                                 <div class="icon icon-primary">
                                     <i class="material-icons">chat</i>
                                 </div>
-                                <h4 class="info-title">First Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <h4 class="info-title">Contacto</h4>
+                                <p>Tenemos personal capacitado y unos cuantos terminators que estan disponibles para uds.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -41,32 +42,32 @@
                                 <div class="icon icon-success">
                                     <i class="material-icons">verified_user</i>
                                 </div>
-                                <h4 class="info-title">Second Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <h4 class="info-title">Seguridad</h4>
+                                <p>A diferencia de otros sitios que dejan pasar bins, nosotros protegeremos tus tarjetas, siempre y cuando nos mandes una foto de tu tarjeta por ambos lados para comprobar de que sea real :u </p>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="info">
                                 <div class="icon icon-danger">
-                                    <i class="material-icons">fingerprint</i>
+                                    <i class="material-icons">fiber_new</i>
                                 </div>
-                                <h4 class="info-title">Third Feature</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                <h4 class="info-title">Nuevos Articulos</h4>
+                                <p>Una variedad de articulos nuevos cada que el chinook saque los bins</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section text-center">
-                <h2 class="title">Productos</h2>
+                <h2 class="title">Productos Disponibles :3</h2>
                 <div class="team">
                     <div class="row">
                         @foreach($products as $product)
                         <div class="col-md-4">
                             <div class="team-player">
-                                <img src="../assets/img/avatar.jpg" alt="Thumbnail Image" class="img-raised img-circle">
+                                <img src="{{ $product->images->first()->image}}" alt="Imagen del producto" class="img-raised img-circle">
                                 <h4 class="title">{{ $product->name }}<br />
-                                <small class="text-muted">Model</small>
+                                <small class="text-muted">{{$product->category->name}}</small>
                                 </h4>
                                 <p class="description">{{$product->description}}</p>
                                 <a href="#pablo" class="btn btn-simple btn-just-icon"><i class="fa fa-twitter"></i></a>
@@ -81,31 +82,31 @@
             <div class="section landing-section">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="text-center title">Work with us</h2>
-                        <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
+                        <h2 class="text-center title">¡Chambea, jala!</h2>
+                        <h4 class="text-center description">Tienes productos que sacaste con bins y no sabes como revenderlos?, ponte en contaco con nosotros y te ayudaremos</h4>
                         <form class="contact-form">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Your Name</label>
+                                        <label class="control-label">Nombre</label>
                                         <input type="email" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group label-floating">
-                                        <label class="control-label">Your Email</label>
+                                        <label class="control-label">Email</label>
                                         <input type="email" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group label-floating">
-                                <label class="control-label">Your Messge</label>
+                                <label class="control-label">Mensaje</label>
                                 <textarea class="form-control" rows="4"></textarea>
                             </div>
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-4 text-center">
                                     <button class="btn btn-primary btn-raised">
-                                    Send Message
+                                    Enviar Mensaje.
                                     </button>
                                 </div>
                             </div>
