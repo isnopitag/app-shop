@@ -20,7 +20,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/products','ProductController@index'); //List products
 Route::get('/admin/products/create','ProductController@create'); //crear products (ver formulario)
 Route::post('/admin/products','ProductController@store'); //crear products (registrar)
-
-
+Route::get('/admin/products/{id}/edit','ProductController@edit'); //crear products (ver formulario)
+Route::post('/admin/products/{id}/edit','ProductController@update'); //crear products (registrar)
+Route::delete('/admin/products/{id}','ProductController@destroy'); //crear products (ver formulario)
 
 

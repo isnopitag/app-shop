@@ -38,7 +38,7 @@
                                         
                                         <a href="{{ url('/products/'.$product->id) }}" rel="tooltip" title="Ver producto" class="btn btn-info btn-simple btn-xs" target="_blank">
                                             <i class="fa fa-info"></i>
-                                        </a>
+                                        </a> 
                                         <a href="{{ url('/admin/products/'.$product->id.'/edit') }}" rel="tooltip" title="Editar producto" class="btn btn-success btn-simple btn-xs">
                                             <i class="fa fa-edit"></i>
                                         </a>
