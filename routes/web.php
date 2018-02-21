@@ -27,6 +27,10 @@ Route::get('/products/{id}/edit','ProductController@edit'); //crear products (ve
 Route::post('/products/{id}/edit','ProductController@update'); //crear products (registrar)
 Route::delete('/products/{id}','ProductController@destroy'); //crear products (ver formulario)
 
+Route::get('/products/{id}/images','ImageController@index'); //crear products (ver formulario)
+Route::post('/products/{id}/images','ImageController@store'); //crear products (registrar)
+Route::delete('/products/{id}/images','ImageController@destroy'); //crear products (ver formulario)
+Route::get('/products/{id}/images/select/{image}','ImageController@select');
 });
 
 
