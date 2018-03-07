@@ -17,7 +17,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::middleware(['auth', 'admin'])->prefix('admin')
+
+Route::get('/products/{id}','ProductController@show'); //ver la pagina especifica del producto
+
+Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')
 ->group(function () {
 
 Route::get('/products','ProductController@index'); //List products
